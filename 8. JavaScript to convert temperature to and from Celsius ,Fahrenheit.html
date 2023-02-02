@@ -1,0 +1,30 @@
+<!--Create event driven JavaScript program to convert temperature to and from Celsius, Fahrenheit.45 Fahrenheit = 7.22222222 Celsius-->
+<!DOCTYPE html>
+<html>
+    <title>Temperature conversion</title>
+    <script type="text/javascript">
+       function convert(degree)
+       {
+            var x
+            if(degree=="C")
+            {
+                x=(document.getElementById("c").value*9/5)+32
+                document.getElementById("f").value=x
+            }
+            {
+                x=(document.getElementById("f").value-32)*5/9
+                document.getElementById("c").value=x
+            }
+        }
+    </script>
+    <style>
+    #p1{position:fixed; bottom:2%;}
+    </style>
+    <body>
+        <h1 align="center">Celcius to Fahrenheit conversion</h1>
+        <p>Insert the temperature in one of the input fields.</p>
+        <p>Temp in Celcius<input type="number" id="c"  onkeyup="convert('C')"></p>
+        <p>Temp in Fahrenheit<input type="number" id="f" onkeyup="convert('F')"></p>
+        <p id="p1">©Harshit Raymus</P>
+    </body>
+</html>

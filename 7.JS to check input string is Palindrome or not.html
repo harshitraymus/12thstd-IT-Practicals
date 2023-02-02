@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check if entered string is Palindrome or not</title>
+    <script type="text/javascript">
+        function check() { 
+	    var str=document.getElementById('n1').value;
+	    var str2=str;
+            var split=str.split("");     
+            var reverse=split.reverse("");
+            var reverse_data=reverse.join(""); 
+            document.write("Entered String is:"+str+"<br>");
+            document.write("Reverse String is:"+reverse_data);
+           if (str2==reverse_data) {
+    	   document.write("<br>It is palindrome ");
+                }	
+           else{
+    	   document.write("<br>not palindrome ");
+                }
+           }
+    </script>
+</head>
+<body bgColor="pink">
+    <form name="f1">
+    <h1 align="center">To check if entered string is Palindrome or not</h1>
+    <h2>Enter String:<input type="text" name="t1" id="n1"> <br><br> </h2>
+    <input type="button" value="Click" onclick="check()">
+    </form>
+    
+</body>
+</html>

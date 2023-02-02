@@ -1,0 +1,51 @@
+<!--Create JavaScript Program Which Computes the average marks of students. Accept Six subject Marks from user.Calculate average marks,which is used to determine the corresponding grade. Range & Grade are:-35 to 60-F/61 to 70-D/71 to 80-C/81 to 90-B/91 to 100-A-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grade a student</title>
+        <script type="text/javascript">
+            function submitmarks(){
+              var s1= parseFloat (document.f1.t1.value) 
+              var s2= parseFloat (document.f1.t2.value)
+              var s3= parseFloat (document.f1.t3.value)
+              var s4= parseFloat (document.f1.t4.value)
+              var s5= parseFloat (document.f1.t5.value)
+              var s6= parseFloat (document.f1.t6.value)
+              var total=s1+s2+s3+s4+s5+s6
+              var avg=(total/6)
+              document.write("The average marks is "+avg+"<br>")
+                if(avg>=91)
+                 document.write("The grade is A")
+                else 
+                 {
+                  if(avg>=81) document.write("The grade is B")
+                   else
+                    {
+                     if(avg>=71) document.write("The grade is C")
+                     else
+                      {
+                       if(avg>=61)document.write("The grade is D")
+                       else
+                        {
+                         if(avg>=35) document.write("The grade is F")
+                         else document.write("Fail/Invalid Input") 
+                        } 
+                      } 
+                    } 
+                } 
+            }
+        </script>
+    </head> 
+    <body>
+         <form name="f1" align="center">
+            <h1 align="center">Marks & Grade of Student</h1>
+            Enter marks of English:<input type="text" name="t1"><br><br>
+            Enter marks of Physics:<input type="text" name="t2"><br><br>
+            Enter marks of Chemistry:<input type="text" name="t3"><br><br>
+            Enter marks of Maths:<input type="text" name="t4"><br><br>
+            Enter marks of Psychology:<input type="text" name="t5"><br><br>
+            Enter marks of IT:<input type="text" name="t6"><br><br>
+            <input type="button" value="Submit" onclick="submitmarks()">
+         </form>
+    </body>
+</html>

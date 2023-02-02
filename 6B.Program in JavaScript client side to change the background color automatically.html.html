@@ -1,0 +1,20 @@
+<!--Create another page using JavaScript where the background color changes automatically after every 1200 seconds. This event must be triggered automatically after the page gets loaded in the browser. There should at least be 7 different and visibly distinct background colors.-->
+<!--Create a web page in HTML having a white background and one Button Object. Write code using JavaScript such that when the mouse is placed over the first button object without clicking, the color of the background of the page should change after every 1200 seconds. There should at least be 7 different and visibly distinct background colors excluding the default color.-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change background color</title>
+    <script type="text/javascript"> 
+    function f1() {document.bgColor="cyan";window.setTimeout("f2()",1200)}
+    function f2() {document.bgColor="purple"; window.setTimeout("f3()",1200) }
+    function f3() {document.bgColor="grey";window.setTimeout("f4()",1200)} 
+    function f4() {document.bgColor="yellow"; window.setTimeout("f5()",1200) }
+    function f5() {document.bgColor="orange"; window.setTimeout("f6()",1200) }
+    function f6() {document.bgColor="blue" ;window.setTimeout("f7()",1200) }
+    function f7() {document.bgColor="red" ;window.setTimeout("f1()",1200) }
+    </script>
+</head> 
+<body onLoad="f1()">
+    <h1 align="center"><u>Webpage changes color automatically on loading</u></h1>
+</body> 
+</html>
